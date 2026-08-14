@@ -35,6 +35,7 @@ and see `spec/README.md` for how the checks in this repo relate to it.
   --- the page is wrong until the check is green, not until you decide it should
   be.
 - Commit when the checks pass. Never commit a red state.
+- Use relative paths. Never use absolute paths when referencing files.
 
 ## The checks (your sensors)
 
@@ -151,6 +152,10 @@ means building legibly is part of building well.
 
 You don't need a name, a student number, or any identity file in the repo: we
 know whose repo it is. Spend the effort on the work.
+
+## What is this project?
+This project is a scrollable timeline of the transactions and events in the AI Circlejerk. 
+Use Canvas as the main graphical tool to display the nodes.
 
 ## This file is yours
 
