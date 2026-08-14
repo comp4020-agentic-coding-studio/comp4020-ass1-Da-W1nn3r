@@ -1,0 +1,548 @@
+{
+  "companies": [
+    { "id": "openai", "name": "OpenAI" },
+    { "id": "anthropic", "name": "Anthropic" },
+    { "id": "microsoft", "name": "Microsoft" },
+    { "id": "google", "name": "Google" },
+    { "id": "nvidia", "name": "Nvidia" },
+    { "id": "meta", "name": "Facebook", "renames": [{ "date": "2021-10-28", "name": "Meta" }] },
+    { "id": "amazon", "name": "Amazon" },
+    { "id": "xai", "name": "xAI" },
+    { "id": "mistral-ai", "name": "Mistral AI" },
+    { "id": "softbank", "name": "SoftBank" },
+    { "id": "oracle", "name": "Oracle" },
+    { "id": "coreweave", "name": "CoreWeave" },
+    { "id": "huang-foundation", "name": "Huang Foundation" },
+    { "id": "intel", "name": "Intel" },
+    { "id": "amd", "name": "AMD" }
+  ],
+  "transactions": [
+    {
+      "id": "t1",
+      "date": "2019-07",
+      "from": "microsoft",
+      "to": "openai",
+      "paperValue": 1000000000,
+      "actualValue": 1000000000,
+      "delivered": true,
+      "description": "Sealed the exclusive Azure compute partnership; the cash-vs-Azure-credit composition was contested in later retellings."
+    },
+    {
+      "id": "t2",
+      "date": "2023-01",
+      "from": "microsoft",
+      "to": "openai",
+      "paperValue": 13000000000,
+      "actualValue": 11600000000,
+      "delivered": false,
+      "description": "The headline '$10B' was one slice of a longer, staged ~$13B deal; ~$11.6B had been disbursed in tranches and Azure credits by Sept 2025."
+    },
+    {
+      "id": "t3",
+      "date": "2023-02",
+      "from": "google",
+      "to": "anthropic",
+      "paperValue": 300000000,
+      "actualValue": 300000000,
+      "delivered": true,
+      "description": "Google's first, smaller Anthropic stake: cash plus a cloud-credit 'preferred provider' deal, ~10% at ~$5B valuation."
+    },
+    {
+      "id": "t4",
+      "date": "2023-09",
+      "from": "amazon",
+      "to": "anthropic",
+      "paperValue": 4000000000,
+      "actualValue": 1250000000,
+      "delivered": false,
+      "description": "Up to $4B pledged; only a $1.25B initial tranche landed at first."
+    },
+    {
+      "id": "t5",
+      "date": "2023-10",
+      "from": "google",
+      "to": "anthropic",
+      "paperValue": 2000000000,
+      "actualValue": 500000000,
+      "delivered": false,
+      "description": "$2B pledged; roughly $500M arrived immediately, the rest 'over time'."
+    },
+    {
+      "id": "t6",
+      "date": "2024-03",
+      "from": "amazon",
+      "to": "anthropic",
+      "paperValue": 4000000000,
+      "actualValue": 4000000000,
+      "delivered": true,
+      "description": "Completes the September 2023 pledge in full — a rare case with no gap between headline and reality."
+    },
+    {
+      "id": "t7",
+      "date": "2025-01",
+      "from": "softbank",
+      "to": "openai",
+      "paperValue": 500000000000,
+      "actualValue": 19000000000,
+      "delivered": false,
+      "description": "Stargate joint venture: '$500B over 4 years' was the headline; SoftBank's real initial equity contribution was closer to $19B."
+    },
+    {
+      "id": "t8",
+      "date": "2025-03",
+      "from": "openai",
+      "to": "coreweave",
+      "paperValue": 11900000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Initial compute-purchase commitment — a confirmed contract, not disbursed cash."
+    },
+    {
+      "id": "t9",
+      "date": "2025-04",
+      "from": "nvidia",
+      "to": "coreweave",
+      "paperValue": 350000000,
+      "actualValue": 350000000,
+      "delivered": true,
+      "description": "Pre-IPO equity stake, grown further in the following months."
+    },
+    {
+      "id": "t10",
+      "date": "2025-05",
+      "from": "openai",
+      "to": "coreweave",
+      "paperValue": 4000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Additional compute-purchase commitment stacked on top of the March deal."
+    },
+    {
+      "id": "t11",
+      "date": "2025-09",
+      "from": "openai",
+      "to": "oracle",
+      "paperValue": 300000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Multi-year cloud/compute purchase commitment as part of Stargate — an announced commitment, not disbursed cash."
+    },
+    {
+      "id": "t12",
+      "date": "2025-09",
+      "from": "oracle",
+      "to": "nvidia",
+      "paperValue": 40000000000,
+      "actualValue": 40000000000,
+      "delivered": true,
+      "description": "Oracle's own capex on roughly 400,000 GB200 chips, building the Abilene, TX capacity it leases back to OpenAI."
+    },
+    {
+      "id": "t13",
+      "date": "2025-09",
+      "from": "openai",
+      "to": "coreweave",
+      "paperValue": 6500000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Brings OpenAI's total CoreWeave compute commitments to roughly $22.4B."
+    },
+    {
+      "id": "t22",
+      "date": "2025-09",
+      "from": "meta",
+      "to": "oracle",
+      "paperValue": 20000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Multi-year OCI cloud-compute deal, one of the 'four multi-billion-dollar contracts' Oracle's Sept 2025 earnings call referenced — confirmed by Oracle's Oct 16 2025 commentary, per CNBC."
+    },
+    {
+      "id": "t14",
+      "date": "2025-09",
+      "from": "nvidia",
+      "to": "openai",
+      "paperValue": 100000000000,
+      "actualValue": 10000000000,
+      "delivered": false,
+      "description": "Letter of intent for up to $100B in equity across ten tranches tied to 10GW of deployment; only the first tranche was ever near-term real, and the deal was superseded five months later."
+    },
+    {
+      "id": "t15",
+      "date": "2025-09",
+      "from": "nvidia",
+      "to": "xai",
+      "paperValue": 2000000000,
+      "actualValue": 2000000000,
+      "delivered": true,
+      "description": "Equity investment as part of a closed $20B Series E round."
+    },
+    {
+      "id": "t16",
+      "date": "2025-11",
+      "from": "nvidia",
+      "to": "coreweave",
+      "paperValue": 6300000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Backstop obligating Nvidia to buy CoreWeave's unsold datacenter capacity through April 2032 — a contractual obligation, not yet drawn."
+    },
+    {
+      "id": "t17",
+      "date": "2025-10-28",
+      "from": "microsoft",
+      "to": "openai",
+      "paperValue": 250000000000,
+      "actualValue": 250000000000,
+      "delivered": true,
+      "description": "Committed incremental Azure purchase alongside Microsoft's recapitalized ~$135B stake in the newly restructured OpenAI Group PBC."
+    },
+    {
+      "id": "t18",
+      "date": "2025-11",
+      "from": "nvidia",
+      "to": "anthropic",
+      "paperValue": 10000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Announced equity investment, alongside Microsoft's $5B, valuing Anthropic at roughly $350B."
+    },
+    {
+      "id": "t19",
+      "date": "2025-11",
+      "from": "microsoft",
+      "to": "anthropic",
+      "paperValue": 5000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "Announced equity investment alongside Nvidia's $10B."
+    },
+    {
+      "id": "t20",
+      "date": "2025-11",
+      "from": "anthropic",
+      "to": "microsoft",
+      "paperValue": 30000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "The buy-back side of the deal: an Azure compute-purchase commitment reciprocal to Microsoft and Nvidia's equity."
+    },
+    {
+      "id": "t21",
+      "date": "2026-02",
+      "from": "nvidia",
+      "to": "openai",
+      "paperValue": 30000000000,
+      "actualValue": 30000000000,
+      "delivered": true,
+      "description": "Actual direct equity, part of a round exceeding $100B at a ~$730B pre-money valuation — replaces the Sept 2025 letter of intent."
+    },
+    {
+      "id": "t23",
+      "date": "2007",
+      "from": "nvidia",
+      "to": "huang-foundation",
+      "paperValue": 12600000,
+      "actualValue": 12600000,
+      "delivered": true,
+      "description": "Foundation seeded with ~370,000 Nvidia shares from Jensen (Jen-Hsun) & Lori Huang's personal holdings, not corporate treasury — grown via splits to ~14.8M shares by 2025."
+    },
+    {
+      "id": "t24",
+      "date": "2023",
+      "from": "nvidia",
+      "to": "huang-foundation",
+      "paperValue": 3400000000,
+      "actualValue": 3400000000,
+      "delivered": true,
+      "description": "Foundation's Nvidia-stock holdings valued at ~$3.4B by end of 2023, per IRS 990 filings — almost all of its assets trace back to the founders' original Nvidia shares."
+    },
+    {
+      "id": "t25",
+      "date": "2024",
+      "from": "nvidia",
+      "to": "huang-foundation",
+      "paperValue": 5800000000,
+      "actualValue": 5800000000,
+      "delivered": true,
+      "description": "Assets grew a further ~$5.8B to ~$9.2B by end of 2024 as Nvidia's stock rallied; IRS-mandated minimum distributions rose accordingly (~$126M given away in 2024)."
+    },
+    {
+      "id": "t26",
+      "date": "2025-09",
+      "from": "nvidia",
+      "to": "intel",
+      "paperValue": 5000000000,
+      "actualValue": 5000000000,
+      "delivered": true,
+      "description": "Nvidia bought 214.7M shares of Intel common stock at $23.28 — a ~4% stake, confirmed and closed Dec 26 2025."
+    },
+    {
+      "id": "t27",
+      "date": "2025-10",
+      "from": "amd",
+      "to": "openai",
+      "paperValue": 34000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "AMD issued OpenAI a warrant for up to 160M AMD shares (~10% of AMD) at $0.01 each, worth ~$34B at signing — tied to milestone deployment of 6GW of Instinct GPUs and vesting up to a $600/share target. A real legal grant, but nothing has vested yet."
+    }
+  ],
+  "companyEvents": [
+    {
+      "id": "ce1",
+      "date": "2015-12",
+      "company": "openai",
+      "title": "Founded as a nonprofit",
+      "note": "The founding pledge was framed as '$1 billion' from Musk, Altman, Hoffman, Thiel and others — a public ceiling, not cash in hand. Only ~$130M had actually been received by around 2019."
+    },
+    {
+      "id": "ce2",
+      "date": "2018-02",
+      "company": "openai",
+      "title": "Musk resigns from the board",
+      "note": "Officially a Tesla conflict-of-interest; reporting suggests a messier internal power struggle over control. His funding reportedly stopped here."
+    },
+    {
+      "id": "ce3",
+      "date": "2019-03",
+      "company": "openai",
+      "title": "Restructures into a capped-profit subsidiary",
+      "note": "OpenAI LP and OpenAI GP LLC formed with an initial ~100x return cap, enabling venture-scale fundraising while the nonprofit board kept control — set up the Microsoft deal four months later."
+    },
+    {
+      "id": "ce4",
+      "date": "2025-05",
+      "company": "openai",
+      "title": "Acquires Jony Ive's io Products",
+      "note": "Around $6.5B all-stock — OpenAI's largest deal ever. Ive himself remains technically a non-employee, working via LoveFrom."
+    },
+    {
+      "id": "ce5",
+      "date": "2025-10-28",
+      "company": "openai",
+      "title": "Restructures again into OpenAI Group PBC",
+      "note": "The nonprofit, renamed OpenAI Foundation, now holds ~26% of the new for-profit PBC (~$130B stake). All new outside capital flows into the PBC from this date."
+    },
+    {
+      "id": "ce6",
+      "date": "2021-01",
+      "company": "anthropic",
+      "title": "Founded by ex-OpenAI safety researchers",
+      "note": "Dario and Daniela Amodei lead a group of OpenAI alumni founding the company around an AI-safety focus."
+    },
+    {
+      "id": "ce7",
+      "date": "2026-02-27",
+      "company": "anthropic",
+      "title": "Banned government-wide by the DoD",
+      "note": "Triggered after Anthropic refused to let Claude be used for bulk domestic surveillance. The July 2025 $200M CDAO contract effectively collapsed; by April 2026 the DoD confirmed it was no longer working with Anthropic."
+    },
+    {
+      "id": "ce8",
+      "date": "2014-01",
+      "company": "google",
+      "title": "Acquires DeepMind",
+      "note": "Widely reported at roughly $500M, though the figure was never officially confirmed — one of the largest AI acquisitions to date."
+    },
+    {
+      "id": "ce9",
+      "date": "2024-08",
+      "company": "google",
+      "title": "Acquihires Character.AI",
+      "note": "$2.7B structured as a non-exclusive tech license rather than a buyout — the real purpose was widely reported as rehiring Noam Shazeer and Daniel De Freitas."
+    },
+    {
+      "id": "ce10",
+      "date": "2025-07",
+      "company": "google",
+      "title": "Acquihires Windsurf",
+      "note": "$2.4B for talent and technology only, no equity stake — structured to dodge the merger review a full buyout would trigger."
+    },
+    {
+      "id": "ce11",
+      "date": "2020-04",
+      "company": "nvidia",
+      "title": "Acquires Mellanox",
+      "note": "$6.9B, closed after a year-plus antitrust review across five jurisdictions. Built Nvidia's networking business, now worth over $10B per quarter."
+    },
+    {
+      "id": "ce12",
+      "date": "2020-09",
+      "company": "nvidia",
+      "title": "Arm acquisition collapses",
+      "note": "Announced at $40B, blocked by the FTC, EU and UK CMA, and terminated in Feb 2022. Nvidia forfeited a $1.36B breakup fee; Arm IPO'd independently in 2023."
+    },
+    {
+      "id": "ce13",
+      "date": "2021-04",
+      "company": "microsoft",
+      "title": "Acquires Nuance Communications",
+      "note": "Announced at $19.7B, closed 11 months late after regulatory review — Microsoft's largest deal after LinkedIn at the time."
+    },
+    {
+      "id": "ce14",
+      "date": "2024-03",
+      "company": "microsoft",
+      "title": "Acquihires Inflection AI",
+      "note": "$650M for model licensing and hiring roughly 70 staff, explicitly structured as not an acquisition. Brought in co-founder Mustafa Suleyman as Microsoft AI's new CEO."
+    },
+    {
+      "id": "ce15",
+      "date": "2023-09",
+      "company": "xai",
+      "title": "Founded by Elon Musk",
+      "note": "Launched to compete directly with OpenAI, the company Musk co-founded and later left."
+    },
+    {
+      "id": "ce32",
+      "date": "2013-12",
+      "company": "meta",
+      "title": "Founds Facebook AI Research (FAIR)",
+      "note": "Yann LeCun leads the new lab under Facebook, Inc. — eight years before the company renamed itself Meta, and a decade before Llama made its AI ambitions public-facing."
+    },
+    {
+      "id": "ce16",
+      "date": "2025-06",
+      "company": "meta",
+      "title": "Buys 49% of Scale AI",
+      "note": "$14.3B for a non-controlling stake, structured to avoid triggering full merger review. Founder Alexandr Wang moved to lead Meta's new 'superintelligence' team."
+    },
+    {
+      "id": "ce17",
+      "date": "2023-04",
+      "company": "mistral-ai",
+      "title": "Founded",
+      "note": "Founded by Arthur Mensch, Guillaume Lample and Timothée Lacroix roughly four weeks before its seed round closed — with no product yet."
+    },
+    {
+      "id": "ce20",
+      "date": "2025-09",
+      "company": "mistral-ai",
+      "title": "Nvidia backs Series C, deepens compute ties",
+      "note": "Nvidia joined ASML (lead, €1.3B for an 11% stake), a16z and DST Global in the €1.7B/$2B round — Nvidia's own slice was never disclosed. Followed by the Nvidia-powered 'Mistral Compute' platform announced weeks later."
+    },
+    {
+      "id": "ce18",
+      "date": "2025-01",
+      "company": "softbank",
+      "title": "Announces the Stargate joint venture",
+      "note": "With OpenAI, Oracle and MGX: '$500B over 4 years' and '$100B immediately' were the headline claims; real initial equity was closer to $52B combined."
+    },
+    {
+      "id": "ce19",
+      "date": "2025-03",
+      "company": "softbank",
+      "title": "Acquires Ampere Computing",
+      "note": "$6.5B cash, closed Nov 2025 after FTC clearance — Carlyle and Oracle exit, fitting SoftBank's AI-infrastructure buildout alongside Stargate and its earlier failed Arm sale."
+    },
+    {
+      "id": "ce21",
+      "date": "2010",
+      "company": "huang-foundation",
+      "title": "Funds Stanford's Jen-Hsun Huang Engineering Center",
+      "note": "$30M pledged 2007, delivered in full by 2010 — a general engineering building anchoring Stanford's Science & Engineering Quad, not an AI-specific institute."
+    },
+    {
+      "id": "ce22",
+      "date": "2023",
+      "company": "huang-foundation",
+      "title": "Pledges $50M toward Oregon State's Huang Collaborative Innovation Complex",
+      "note": "Seeds a ~$200–213M supercomputing/AI/robotics/climate-science research center at Huang's and his wife's shared alma mater."
+    },
+    {
+      "id": "ce23",
+      "date": "2024",
+      "company": "huang-foundation",
+      "title": "Gives $100M to UCSF",
+      "note": "Funds AI and advanced-computing methods for biomedical research."
+    },
+    {
+      "id": "ce24",
+      "date": "2026-05-13",
+      "company": "huang-foundation",
+      "title": "Donates $108.3M in CoreWeave compute to universities",
+      "note": "In-kind cloud-compute capacity, not cash, given to unnamed universities and nonprofits. Nvidia is itself a CoreWeave investor, so this also raises demand for a company Nvidia and Huang have a financial stake in."
+    },
+    {
+      "id": "ce25",
+      "date": "2014",
+      "company": "google",
+      "title": "Signs multi-year custom TPU deal with Broadcom",
+      "note": "Co-design contract running through at least 2031; no dollar figure has ever been disclosed."
+    },
+    {
+      "id": "ce26",
+      "date": "2025-10",
+      "company": "openai",
+      "title": "Broadcom to co-develop custom 'Jalapeño' AI accelerators",
+      "note": "10GW of custom ASICs deploying 2026–2029; Broadcom's own semiconductor president publicly disputed a widely-reported $10B order-size figure, so no confirmed dollar value is used here."
+    },
+    {
+      "id": "ce27",
+      "date": "2025-10",
+      "company": "openai",
+      "title": "Stargate signs DRAM supply MOU with Samsung and SK Hynix",
+      "note": "Non-binding letter of intent for roughly 900,000 combined DRAM wafer starts per month — as of March 2026 reporting, minimal near-term conversion into firm orders."
+    },
+    {
+      "id": "ce28",
+      "date": "2026-04",
+      "company": "meta",
+      "title": "Broadcom to co-design custom MTIA chips",
+      "note": "1GW of custom AI accelerators confirmed; a separately reported $35B extension through 2029 is single-source and unconfirmed, so it isn't used as a dollar figure here."
+    },
+    {
+      "id": "ce29",
+      "date": "2026-06-05",
+      "company": "nvidia",
+      "title": "Certifies SK Hynix, Samsung and Micron as multi-vendor HBM4 suppliers",
+      "note": "Official qualification for the Vera Rubin platform, confirmed by Jensen Huang; estimated allocation split roughly 60-70% SK Hynix, 25-30% Samsung, the rest Micron. Followed months of paid sample shipments and a separate multi-year SK Hynix HBM co-development deal running through 2030."
+    },
+    {
+      "id": "ce30",
+      "date": "2026-07-25",
+      "company": "nvidia",
+      "title": "Announces $500B+ partnership with SK Group",
+      "note": "Spans AI-factory construction to HBM4 supply with SK Hynix and SK Telecom — announced as a letter of intent, not a binding contract; scope and enforceability remain unclear, echoing the headline-vs-reality gap in Stargate's own $500B figure."
+    },
+    {
+      "id": "ce31",
+      "date": "2024",
+      "company": "huang-foundation",
+      "title": "Routes most giving to the Huangs' own 'GeForce Fund' rather than any outside cause",
+      "note": "Of $126M given in 2024, $82.5M (vs. $30.5M to Oregon State) went to the GeForce Fund — a donor-advised fund at Schwab Charitable that Jensen and Lori Huang personally control and named after Nvidia's own product line. From 2007–2022 the pattern was the same: ~$125M moved to the GeForce Fund against ~$65M to outside nonprofits. Funded in Nvidia shares that the DAF can hold indefinitely with no payout requirement, this is less \"money flowing back into an AI company\" than money never leaving Huang/Nvidia hands at all — the receipt is charitable, the underlying stock stays exactly where it started."
+    }
+  ],
+  "llmReleases": [
+    { "date": "2018-06", "company": "openai", "model": "GPT-1", "note": "First GPT paper — introduced the transformer-decoder pretraining recipe the whole lineage follows." },
+    { "date": "2020-06-11", "company": "openai", "model": "GPT-3 (API beta)", "note": "175B parameters; first commercially viable GPT via API; kicked off the 'few-shot prompting' era." },
+    { "date": "2022-11-30", "company": "openai", "model": "ChatGPT (GPT-3.5)", "note": "Free research-preview chat interface; 1M users in 5 days — the launch that reset the whole industry's roadmap." },
+    { "date": "2023-03-14", "company": "openai", "model": "GPT-4", "note": "Major reasoning/multimodal-input jump; quietly powered an early Bing Chat before its own ChatGPT debut." },
+    { "date": "2024-09-12", "company": "openai", "model": "o1-preview / o1-mini", "note": "First OpenAI 'reasoning' model — trades inference-time compute for accuracy on math/science/code; started the reasoning-model race." },
+    { "date": "2025-08-07", "company": "openai", "model": "GPT-5", "note": "First 'unified' model routing between fast/instant and deep-reasoning modes; rocky rollout after users revolted at the temporary removal of GPT-4o." },
+    { "date": "2023-03-14", "company": "anthropic", "model": "Claude 1 (API, w/ Claude Instant)", "note": "Anthropic's first public model, built on Constitutional AI (self-critique vs. written principles rather than pure RLHF)." },
+    { "date": "2024-03-04", "company": "anthropic", "model": "Claude 3 (Opus/Sonnet/Haiku)", "note": "Family launch establishing the Opus/Sonnet/Haiku size-tier naming still in use." },
+    { "date": "2024-06-20", "company": "anthropic", "model": "Claude 3.5 Sonnet", "note": "Mid-tier model that beat the larger Claude 3 Opus on benchmarks; launched with the Artifacts feature." },
+    { "date": "2025-05-22", "company": "anthropic", "model": "Claude Opus 4 / Sonnet 4", "note": "Opus 4 marketed as the world's-best coding model at the time." },
+    { "date": "2025-11-24", "company": "anthropic", "model": "Claude Opus 4.5", "note": "Anthropic's 'biggest and most intelligent' model at the time; ~2/3 price cut vs. Opus 4.1, aimed at wider distribution." },
+    { "date": "2023-12-06", "company": "google", "model": "Gemini 1.0 (Pro/Nano; Ultra Feb 2024)", "note": "First natively multimodal Google model family." },
+    { "date": "2024-02", "company": "google", "model": "Gemini 1.5", "note": "Introduced MoE architecture and a long-context breakthrough (up to 1M+ tokens)." },
+    { "date": "2025-03-25", "company": "google", "model": "Gemini 2.5 Pro (experimental)", "note": "'Thinking' model; stable GA followed 2025-06-17 alongside Flash." },
+    { "date": "2025-11-18", "company": "google", "model": "Gemini 3 (Pro / DeepThink)", "note": "First model to break 1500 Elo on LMArena; Flash variant followed 2025-12-17." },
+    { "date": "2023-02", "company": "meta", "model": "Llama 1", "note": "Limited-access research release; the leak of its weights shortly after kickstarted the open-weights LLM ecosystem." },
+    { "date": "2023-07-18", "company": "meta", "model": "Llama 2", "note": "First Llama with a genuinely open (free-for-most-commercial-use) license." },
+    { "date": "2024-07-23", "company": "meta", "model": "Llama 3.1", "note": "405B variant — first open-weight model to seriously compete with GPT-4-class closed models." },
+    { "date": "2025-04-05", "company": "meta", "model": "Llama 4 (Scout, Maverick)", "note": "Native multimodal-from-the-ground-up 'herd'; drew criticism for underwhelming benchmarks relative to the hype." },
+    { "date": "2023-11-04", "company": "xai", "model": "Grok 1 (beta)", "note": "Launched for X Premium; later open-sourced weights — xAI's only open-weight flagship." },
+    { "date": "2024-07-18", "company": "xai", "model": "Grok 2", "note": "Improved multimodal/tool use." },
+    { "date": "2025-07-09", "company": "xai", "model": "Grok 4", "note": "Native tools, real-time search, multi-agent 'Heavy' mode — became xAI's flagship." },
+    { "date": "2025-11-17", "company": "xai", "model": "Grok 4.1", "note": "Default model for consumer apps after a two-week silent A/B rollout." },
+    { "date": "2023-09-27", "company": "mistral-ai", "model": "Mistral 7B", "note": "Released via a bare magnet-link tweet, no announcement build-up; Apache 2.0, punched well above its weight class." },
+    { "date": "2023-12-08", "company": "mistral-ai", "model": "Mixtral 8x7B", "note": "Open-weights sparse mixture-of-experts; outperformed Llama 2 70B with ~6x faster inference." },
+    { "date": "2024-07-24", "company": "mistral-ai", "model": "Mistral Large 2", "note": "Vastly outperformed v1; 123B parameters; strong multilingual/code coverage." },
+    { "date": "2025-12-02", "company": "mistral-ai", "model": "Mistral Large 3", "note": "Flagship open-weight MoE (675B total / 41B active), Apache 2.0, 262K context." },
+    { "date": "2024-12-03", "company": "amazon", "model": "Nova (Micro/Lite/Pro)", "note": "Amazon's first serious first-party foundation-model family, announced at AWS re:Invent as a Bedrock-native answer to OpenAI/Google/Anthropic/Meta." },
+    { "date": "2025-04-30", "company": "amazon", "model": "Nova Premier", "note": "Largest model in the Nova family, released after being 'still in training' at the Dec 2024 launch." }
+  ]
+}
