@@ -1,83 +1,83 @@
 # Process overview
 
-<!-- TEMPLATE: this file is a shape to fill in, not a form. Replace everything
-     in it with your own overview, and delete this comment — `pnpm
-     check:evidence` will remind you if it's still here. -->
-
 A reading-guide to how the work came together --- a map to your process, not an
-essay about it. Markers read this file and follow its citations; they don't
-trawl the repo for evidence you didn't point at, so if a moment mattered, cite
-it.
-
-This file is the shape; the course site's
-[assessment page](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#what-you-submit)
-is the requirement, and each brief adds its own word count and moment count.
+essay about it.
 
 ## What I built
 
-One paragraph: the thing, and the idea behind it.
+A scrollable timeline of the money and transactions running through the AI
+circlejerk --- funding rounds, acquisitions, chip deals, foundation gifts ---
+rendered on a single `<canvas>` element that you scrub through rather than a
+list of DOM cards, backed by a hand-assembled dataset of dated events.
 
 ## The moments that mattered
 
-Three or four for an assignment; fewer is fine for a weekly prototype. Keep the
-list short so each moment has room to do all four jobs:
+1. **Building a dataset an LLM can't just make up in one pass.** A single
+   prompt to "list AI money events" gets you a plausible-looking but patchy
+   timeline: clustered around a few famous deals with big gaps everywhere
+   else. Instead of accepting that first pass, I went back and prompted
+   specifically for the dates that fell *between* what had already been
+   found, treating the existing timeline as a gap map rather than a finished
+   list. I also did manual research alongside it --- including saving a
+   scrape of Forbes' AI 50 list (`top_ai_companies.txt`) to cross-check
+   company names and founding details by hand rather than trusting a
+   generated list unverified. I judged the result "comprehensive enough" by
+   checking density along the date axis rather than event count: no
+   multi-year silent gaps left once the two CSVs were merged into
+   `data/timeline.json`
+   ([`a05da5c`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Da-W1nn3r/commit/a05da5c)).
 
-1. **what happened** --- the problem, or the thing the agent got wrong
-2. **what you did instead of the obvious thing** --- the call you made, and why
-   it beat the obvious one
-3. **how you knew it was right** --- the check you ran, the viewport you looked
-   at, what you read before accepting the diff
-4. **the citation** --- a commit or commit range, a `CLAUDE.md` change, a check
-   that went from red to green, a prompt paired with the commit it produced
+2. **Putting the project's intent in the harness, not in another prompt.**
+   Rather than re-explaining "this is a scrollable AI-transactions timeline,
+   render it with Canvas" at the top of every session, I added it to
+   `CLAUDE.md` directly. That's the difference between a fact I'd have to
+   keep re-supplying and a fact the agent starts every session already
+   knowing --- the harness carries the intent instead of me
+   ([`4e47252`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Da-W1nn3r/commit/4e47252)).
 
-Jobs 2 and 3 are the ones the repo can't tell a reader on its own, so they're
-where the marks are. The strongest moments are the ones where a correction
-landed in the **harness** rather than in another prompt --- a rule added to
-`CLAUDE.md`, a check wired up, an attempt thrown away: re-prompting until it
-passes is the routine case, and changing what the agent works against is the
-skilled one.
+3. **Making the slider and the canvas agree on what "smooth" means.**
+   Built in this order: the scrub/slider input first, then the canvas motion
+   it drives. The obvious way to wire a wheel-driven slider is to set the
+   timeline cursor directly from the scroll delta, but wheel events arrive in
+   uneven bursts, so that reads as jittery jumps rather than scrolling.
+   `Scrubber` (`src/scrub.ts`) instead splits the value in two: wheel input
+   moves a target instantly, and the displayed `current` value chases it each
+   frame with an exponential ease, so a burst of discrete events still reads
+   as one continuous motion. The canvas side of that same problem was nodes:
+   the obvious approach snaps a node straight to its new layout slot the
+   instant the established set changes; instead `CanvasRenderer` eases a
+   node's *position* toward its target the same way the scrubber does, but
+   gives a newly-established node's *size* a separate, fixed-duration
+   grow-in curve (`easeOutCubic` over `GROW_DURATION_SECONDS`) so it visibly
+   pops into existence rather than fading in on the same asymptotic curve as
+   everything else --- and a node that scrubs back past its establishing
+   date shrinks back out on its own (faster) curve instead of vanishing.
+   Getting label/marker placement right on the timeline track took three
+   discarded attempts before this shape, each of which fixed one overlap
+   case and reintroduced another (documented in the `dodgeOffsets` comment
+   in `src/renderer.ts`) --- I kept the version that checks real 2D distance
+   between markers instead of treating x and y as independent, because it
+   was the only one that didn't just move the collision to mobile width or a
+   denser cluster. I checked all of this by scrubbing rapidly back and forth
+   across the densest date clusters at both 1920×1080 and 390×844 and
+   watching for jitter, popping, or overlapping labels, plus the underlying
+   math in `model.test.ts` and `dates.test.ts`
+   ([`d703fe4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Da-W1nn3r/commit/d703fe4)).
 
-Cite each moment as a link whose text is the commit hash or range and whose
-target is this repo's commit or compare URL, so a reader clicks straight to the
-evidence:
-
-- one commit: [`a1b2c3d`](https://github.com/YOUR-ORG/YOUR-REPO/commit/a1b2c3d)
-- a range:
-  [`a1b2c3d...e4f5a6b`](https://github.com/YOUR-ORG/YOUR-REPO/compare/a1b2c3d...e4f5a6b)
-
-To pair a prompt with the commit it produced, quote the prompt (curated, not a
-full transcript) next to the citation:
-
-> the prompt, verbatim
-
-Screenshots are welcome where one carries the verification better than a
-sentence does. Commit the file to this repo and link it with a **relative**
-path, which is what makes it render on GitHub: `![alt text](docs/before.png)`.
-Images don't count towards the word count and don't replace the citation.
-
-### A worked moment, for shape
-
-Delete this section along with the rest of the boilerplate --- it's here to show
-the four jobs in one paragraph, not to be imitated in content.
-
-> The date formatter kept coming back with `toLocaleDateString()` and no locale
-> argument, so the same build rendered differently on my machine and in CI. I'd
-> already re-prompted it twice, which fixed the line but not the habit, so the
-> third time I put the rule in `CLAUDE.md` instead
-> ([`3f9ac21`](https://github.com/YOUR-ORG/YOUR-REPO/commit/3f9ac21)) and added
-> a spec test that fails on a bare `toLocaleDateString`. That's what told me it
-> had actually taken: the test went red against the old code and green against
-> the new, and the next two features it wrote passed it without prompting
-> ([`3f9ac21...b7e0d14`](https://github.com/YOUR-ORG/YOUR-REPO/compare/3f9ac21...b7e0d14)).
-
-## Before you ship
-
-`pnpm check:evidence` verifies your citations resolve to real commits, that the
-current reflection entry is in `reflections/`, and that your `CLAUDE.md` is
-there --- before a marker ever opens the file. It checks that your map is
-traceable, not that it is good: the marker judges whether your small,
-deliberately chosen set of moments shows real judgement and reflection. A green
-check is not a substitute for that curation.
-
-Images are deliberately not checked, because whether one renders is visible the
-moment you look. Open this file on GitHub and look at it before you ship.
+4. **Theme and headline following the scrub position, not fighting it.**
+   Last two pieces, in order: light/dark mode, then the scrolling headline.
+   For theme, the obvious approach reads `prefers-color-scheme` once at
+   load; instead `theme.ts` keeps an explicit user override in
+   `localStorage` and only follows a live OS theme change when
+   `storedTheme()` is empty, so toggling the site's own switch can't get
+   silently undone by the OS flipping in the background. For the headline, I
+   didn't want a static caption sitting above a canvas that's constantly
+   moving, so `currentHeadline` (`src/headline.ts`) picks whichever
+   transaction, event, or release is most recent at-or-before the scrubbed
+   time `t`, with a deterministic tie-break for same-date candidates and a
+   fallback line before the first event --- so the headline reads as
+   commentary tied to wherever you've scrubbed to, not a fixed subtitle. I
+   verified both by hand (toggling OS dark mode with a manual override set,
+   and scrubbing to known dates to confirm the headline text flips exactly
+   when the next event's date is crossed) and via `headline.test.ts`
+   ([`d703fe4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass1-Da-W1nn3r/commit/d703fe4)).
