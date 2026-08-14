@@ -56,6 +56,7 @@ problems with mise.
   like an API key, so your COMP4020 key can't end up in a public repo. Installed
   automatically by `pnpm install`.
 
+
 This template is SSG-agnostic: it's plain HTML/CSS/TypeScript on Vite, so you
 can add Astro, Eleventy, or any static generator later without changing how it
 deploys. TypeScript is the course default over plain JavaScript: the types are

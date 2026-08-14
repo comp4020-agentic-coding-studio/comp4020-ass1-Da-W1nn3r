@@ -3,21 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COMP4020 prototype</title>
+    <title>AI Circlejerk Timeline</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header>
       <nav aria-label="Primary">
         <a href="./">Home</a>
+        <button type="button" id="theme-toggle" aria-pressed="false" aria-label="Switch to dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" />
+            <path d="M12 2.5v2.5M12 19v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M2.5 12H5M19 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z" />
+          </svg>
+        </button>
       </nav>
-    </header>
-    <main>
-      <h1>COMP4020 prototype</h1>
-      <p data-testid="intro">
-        Replace this with your prototype. This week's brief is on the course website;
-        <code>spec/README.md</code> explains how the checks in this repo relate to it.
+      <h1>AI Circlejerk Timeline</h1>
+      <p>
+        Scroll or drag across the diagram to move through time. Each company's
+        outer ring grows with the paper value it's received (or given, via the
+        toggle below); its solid core grows with how much of that actually
+        landed — a wide ring around a small core is a company still owed
+        money. Circles travel between
+        nodes as money changes hands — filled means delivered, outlined means
+        still just a pledge. Diamonds mark model releases, triangles mark
+        company milestones. Hover a node, circle, diamond, or triangle for
+        detail.
       </p>
+    </header>
+    <div id="headline" aria-live="polite">
+      <span id="headline-text"></span>
+    </div>
+    <main>
+      <dl id="hud">
+        <div>
+          <dt>Paper value</dt>
+          <dd id="hud-paper">$0</dd>
+        </div>
+        <div>
+          <dt>Actually transacted</dt>
+          <dd id="hud-actual">$0</dd>
+        </div>
+        <div>
+          <dt>Still in limbo</dt>
+          <dd id="hud-limbo">$0</dd>
+        </div>
+        <div>
+          <dt>Scale nodes by</dt>
+          <dd>
+            <button type="button" id="scale-toggle" aria-pressed="false">Received</button>
+          </dd>
+        </div>
+        <div>
+          <dt>Playback</dt>
+          <dd>
+            <button type="button" id="play-toggle" aria-pressed="false">▶ Play</button>
+          </dd>
+        </div>
+      </dl>
+      <canvas id="timeline-canvas" aria-label="Timeline of AI company transactions and model releases"></canvas>
+      <div id="tooltip" role="status" hidden></div>
     </main>
     <script type="module" src="./main.ts"></script>
   </body>

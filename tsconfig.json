@@ -11,7 +11,8 @@
     "moduleDetection": "force",
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true
   },
-  "include": ["*.ts", "spec"]
+  "include": ["*.ts", "src", "spec"]
 }
