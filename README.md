@@ -41,6 +41,8 @@ problems with mise.
 ## What's here
 
 - `index.html`, `styles.css`, `main.ts` --- a minimal starting site. Replace it.
+- `data/timeline.json` --- the timeline dataset; see `data/README.md` for how
+  to add companies, transactions, releases, and events to it.
 - `mise.toml` --- the tested Node and pnpm versions for this template.
 - `spec/` --- what the checks are for (`README.md`), the shipped invariants
   (`invariants.test.ts`), and a replaceable starter test (`starter.test.ts`);

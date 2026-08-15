@@ -157,6 +157,12 @@ know whose repo it is. Spend the effort on the work.
 This project is a scrollable timeline of the transactions and events in the AI Circlejerk. 
 Use Canvas as the main graphical tool to display the nodes.
 
+See `data/README.md` for how to add companies, transactions, releases, and
+events to the dataset --- it covers the schema, the rename-vs-new-company
+distinction (needed whenever a merger/acquisition should carry an existing
+node's totals forward instead of splitting them across two disconnected
+nodes), and how to verify a change actually renders right, not just parses.
+
 ## This file is yours
 
 This CLAUDE.md is a starting point, not a fixed rulebook. As you learn what your
