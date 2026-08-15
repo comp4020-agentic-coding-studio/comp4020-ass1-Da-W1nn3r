@@ -7,7 +7,7 @@
     { "id": "nvidia", "name": "Nvidia" },
     { "id": "meta", "name": "Facebook", "renames": [{ "date": "2021-10-28", "name": "Meta" }] },
     { "id": "amazon", "name": "Amazon" },
-    { "id": "xai", "name": "xAI" },
+    { "id": "xai", "name": "xAI", "renames": [{ "date": "2026-02-02", "name": "SpaceX" }] },
     { "id": "mistral-ai", "name": "Mistral AI" },
     { "id": "softbank", "name": "SoftBank" },
     { "id": "oracle", "name": "Oracle" },
@@ -286,6 +286,16 @@
       "actualValue": 0,
       "delivered": false,
       "description": "AMD issued OpenAI a warrant for up to 160M AMD shares (~10% of AMD) at $0.01 each, worth ~$34B at signing — tied to milestone deployment of 6GW of Instinct GPUs and vesting up to a $600/share target. A real legal grant, but nothing has vested yet."
+    },
+    {
+      "id": "t28",
+      "date": "2026-08-14",
+      "from": "nvidia",
+      "to": "xai",
+      "paperValue": 19000000000,
+      "actualValue": 19000000000,
+      "delivered": true,
+      "description": "The uplift on Nvidia's original $2B xAI stake (t15) after February's SpaceX-xAI merger converted it to SpaceX equity and the shares re-rated: per Nvidia's Aug 14 2026 SEC 13F, the combined position (122.8M SpaceX Class A shares) totalled ~$21B, recorded here as ~$19B on top of the already-counted $2B so the same money isn't summed twice. Nvidia's second-largest holding after ~$30B in Intel — and itself a volatile mark, having slipped to ~$17.2B within a week as SpaceX shares retreated from their June high."
     }
   ],
   "companyEvents": [
@@ -512,6 +522,13 @@
       "company": "huang-foundation",
       "title": "Routes most giving to the Huangs' own 'GeForce Fund' rather than any outside cause",
       "note": "Of $126M given in 2024, $82.5M (vs. $30.5M to Oregon State) went to the GeForce Fund — a donor-advised fund at Schwab Charitable that Jensen and Lori Huang personally control and named after Nvidia's own product line. From 2007–2022 the pattern was the same: ~$125M moved to the GeForce Fund against ~$65M to outside nonprofits. Funded in Nvidia shares that the DAF can hold indefinitely with no payout requirement, this is less \"money flowing back into an AI company\" than money never leaving Huang/Nvidia hands at all — the receipt is charitable, the underlying stock stays exactly where it started."
+    },
+    {
+      "id": "ce33",
+      "date": "2026-02-02",
+      "company": "xai",
+      "title": "Acquires xAI in $1.25T all-stock merger",
+      "note": "SpaceX (valued at $1T) absorbed xAI (valued at $250B) in the largest merger on record, folding Grok and the X platform in ahead of a planned IPO. xAI shareholders — including Nvidia's Series E stake — converted into SpaceX equity at 0.1433 SpaceX shares per xAI share; Tesla's separate $2B xAI stake converted the same way, though Tesla itself stayed out of the deal."
     }
   ],
   "llmReleases": [
