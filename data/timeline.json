@@ -5,6 +5,7 @@
     { "id": "microsoft", "name": "Microsoft" },
     { "id": "google", "name": "Google" },
     { "id": "nvidia", "name": "Nvidia" },
+    { "id": "riot-platforms", "name": "Riot Platforms" },
     { "id": "meta", "name": "Facebook", "renames": [{ "date": "2021-10-28", "name": "Meta" }] },
     { "id": "amazon", "name": "Amazon" },
     { "id": "xai", "name": "xAI", "renames": [{ "date": "2026-02-02", "name": "SpaceX" }] },
@@ -235,7 +236,7 @@
       "paperValue": 30000000000,
       "actualValue": 30000000000,
       "delivered": true,
-      "description": "Actual direct equity, part of a round exceeding $100B at a ~$730B pre-money valuation — replaces the Sept 2025 letter of intent."
+      "description": "Actual direct equity, part of a round exceeding $100B at a ~$730B pre-money valuation — replaces the Sept 2025 letter of intent. The round kept growing around this same $30B after this point, closing March 31 2026 at $122B total and an $852B valuation (see t30/t31 for the other investors who joined)."
     },
     {
       "id": "t23",
@@ -296,6 +297,96 @@
       "actualValue": 19000000000,
       "delivered": true,
       "description": "The uplift on Nvidia's original $2B xAI stake (t15) after February's SpaceX-xAI merger converted it to SpaceX equity and the shares re-rated: per Nvidia's Aug 14 2026 SEC 13F, the combined position (122.8M SpaceX Class A shares) totalled ~$21B, recorded here as ~$19B on top of the already-counted $2B so the same money isn't summed twice. Nvidia's second-largest holding after ~$30B in Intel — and itself a volatile mark, having slipped to ~$17.2B within a week as SpaceX shares retreated from their June high."
+    },
+    {
+      "id": "t29",
+      "date": "2025-03-31",
+      "from": "softbank",
+      "to": "openai",
+      "paperValue": 30000000000,
+      "actualValue": 30000000000,
+      "delivered": true,
+      "description": "A separate $40B round into OpenAI's cap table at a $300B valuation, distinct from Stargate's $19B (t7): SoftBank's $30B landed in two tranches, the final $22.5B completing by December 2025."
+    },
+    {
+      "id": "t34",
+      "date": "2025-11-03",
+      "from": "openai",
+      "to": "amazon",
+      "paperValue": 38000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "OpenAI's first-ever AWS contract, breaking Microsoft's cloud exclusivity: a signed 7-year compute-purchase commitment, not yet disbursed cash."
+    },
+    {
+      "id": "t35",
+      "date": "2026-02-24",
+      "from": "amd",
+      "to": "meta",
+      "paperValue": 35000000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "AMD issued Meta the same warrant structure as OpenAI's (t27): up to 160M AMD shares at $0.01 each, vesting against a 6GW Instinct MI450 deployment target — nothing vested yet."
+    },
+    {
+      "id": "t30",
+      "date": "2026-03-31",
+      "from": "amazon",
+      "to": "openai",
+      "paperValue": 50000000000,
+      "actualValue": 15000000000,
+      "delivered": false,
+      "description": "Amazon's slice of the $122B round that closed OpenAI at an $852B valuation; $35B of the $50B is contingent on an IPO or AGI-declaration milestone."
+    },
+    {
+      "id": "t31",
+      "date": "2026-03-31",
+      "from": "softbank",
+      "to": "openai",
+      "paperValue": 30000000000,
+      "actualValue": 30000000000,
+      "delivered": true,
+      "description": "SoftBank's third distinct OpenAI commitment (after Stargate's $19B and March 2025's $30B): its co-lead share of the $122B round closing OpenAI at an $852B valuation."
+    },
+    {
+      "id": "t33",
+      "date": "2026-04-20",
+      "from": "amazon",
+      "to": "anthropic",
+      "paperValue": 25000000000,
+      "actualValue": 5000000000,
+      "delivered": false,
+      "description": "New commitment on top of the $8B already delivered (t4/t6): $5B landed immediately, up to $20B more tied to commercial milestones, alongside Anthropic's pledge to spend $100B+ over a decade on AWS chips."
+    },
+    {
+      "id": "t32",
+      "date": "2026-04-24",
+      "from": "google",
+      "to": "anthropic",
+      "paperValue": 40000000000,
+      "actualValue": 10000000000,
+      "delivered": false,
+      "description": "$10B landed immediately at Anthropic's then-$350B valuation; the remaining $30B is contingent on performance milestones, bundled with a 5GW TPU compute pact through 2027."
+    },
+    {
+      "id": "t36",
+      "date": "2026-05-20",
+      "from": "anthropic",
+      "to": "xai",
+      "paperValue": 45000000000,
+      "actualValue": 3750000000,
+      "delivered": false,
+      "description": "Anthropic pays xAI/SpaceX $1.25B/month for Colossus compute capacity; SpaceX's S-1 filing framed the deal as running to 2029 (~$45B total), which Musk then publicly contradicted, calling it a 180-day lease instead."
+    },
+    {
+      "id": "t37",
+      "date": "2026-08-11",
+      "from": "anthropic",
+      "to": "riot-platforms",
+      "paperValue": 9100000000,
+      "actualValue": 0,
+      "delivered": false,
+      "description": "20-year compute deal for 191MW at Riot's Rockdale, TX site, extendable to $16.1B; rollout begins with 96MW by December 2027."
     }
   ],
   "companyEvents": [
@@ -529,6 +620,34 @@
       "company": "xai",
       "title": "Acquires xAI in $1.25T all-stock merger",
       "note": "SpaceX (valued at $1T) absorbed xAI (valued at $250B) in the largest merger on record, folding Grok and the X platform in ahead of a planned IPO. xAI shareholders — including Nvidia's Series E stake — converted into SpaceX equity at 0.1433 SpaceX shares per xAI share; Tesla's separate $2B xAI stake converted the same way, though Tesla itself stayed out of the deal."
+    },
+    {
+      "id": "ce34",
+      "date": "2025-09-02",
+      "company": "anthropic",
+      "title": "Raises $13B Series F at $183B valuation",
+      "note": "Led by ICONIQ, Fidelity and Lightspeed with BlackRock, Blackstone, GIC, Goldman Sachs and the Qatar Investment Authority — pure institutional money, no Google/Amazon/Microsoft/Nvidia stake attached."
+    },
+    {
+      "id": "ce35",
+      "date": "2026-02-12",
+      "company": "anthropic",
+      "title": "Raises $30B Series G at $380B valuation",
+      "note": "Led by GIC and Coatue; folds in the previously-announced Microsoft (t19) and Nvidia (t18) commitments as part of the round rather than adding new hyperscaler money on top."
+    },
+    {
+      "id": "ce36",
+      "date": "2026-05-28",
+      "company": "anthropic",
+      "title": "Raises $65B Series H at $965B valuation",
+      "note": "Led by Altimeter, Dragoneer, Greenoaks and Sequoia; $15B of the round is previously-committed hyperscaler money including Amazon's April tranche (t33), with Samsung, SK Hynix and Micron joining as infrastructure partners. Puts Anthropic's valuation above OpenAI's."
+    },
+    {
+      "id": "ce37",
+      "date": "2026-08-10",
+      "company": "nvidia",
+      "title": "Announces $500B+ financing alliance with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR",
+      "note": "Non-binding MOUs to mobilize third-party capital for AI-infrastructure buildouts off Nvidia's own balance sheet — a financing structure, not a direct investment."
     }
   ],
   "llmReleases": [
